@@ -52,3 +52,22 @@ function mostrarListaAmigos() {
     });
 }
 
+function sortearAmigo() {
+    let resultado = document.getElementById("resultado");
+
+    //En caso que no tenga amigos para agregar y si aprete el boton sortear aparecera este mensaje
+    if (amigos.length === 0) {
+        resultado.innerHTML = "<li>No hay amigos para sortear</li>";
+        return;
+    }
+
+    // Elegir un índice aleatorio del array amigos
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    // Obtener el amigo seleccionado
+    let amigoSeleccionado = amigos[indiceAleatorio];
+
+    // Mostrar el resultado en el ul con id "resultado"
+    resultado.innerHTML = `<li>${amigoSeleccionado}</li>`;
+}
+
