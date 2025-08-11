@@ -69,5 +69,11 @@ function sortearAmigo() {
 
     // Mostrar el resultado en el ul con id "resultado"
     resultado.innerHTML = `<li>El amigo secreto sorteado es: ${amigoSeleccionado}</li>`;
+
+    // Limpiar la lista de amigos en pantalla
+    lista.innerHTML = "";
+
+    // Vaciar el array amigos para que no queden nombres
+    amigos = [];
 }
 
