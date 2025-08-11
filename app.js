@@ -54,6 +54,7 @@ function mostrarListaAmigos() {
 
 function sortearAmigo() {
     let resultado = document.getElementById("resultado");
+      let lista = document.getElementById("listaAmigos");
 
     //En caso que no tenga amigos para agregar y si aprete el boton sortear aparecera este mensaje
     if (amigos.length === 0) {
