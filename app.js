@@ -1,6 +1,6 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
-// Declaramos un array .
+// Declaramos un array
 let amigos = [];
 
 // Función que se ejecuta cuando el usuario hace clic en el botón "Añadir"
@@ -15,6 +15,15 @@ function agregarAmigo() {
     if (nombre === "") {
         alert("Por favor, escribe un nombre."); // Mostramos un mensaje de alerta
         return; // Salimos de la función sin agregar nada
+    }
+
+     // Validar que solo contenga letras 
+    let soloTexto = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+    //Usamos el método test()  para verificar si la variable
+    // 'nombre' cumple con esta regla: que contenga solo los caracteres permitidos.
+    if (!soloTexto.test(nombre)) {
+        alert("Por favor, ingrese solo texto");
+        return;
     }
 
     // Agregamos el nombre al final del array "amigos"
