@@ -7,6 +7,7 @@ let amigos = [];
 function agregarAmigo() {
     // Obtenemos el elemento input por su id "amigo"
     let input = document.getElementById("amigo");
+   
 
     // Tomamos el valor del input y eliminamos espacios en blanco al inicio y al final
     let nombre = input.value.trim();
@@ -23,6 +24,13 @@ function agregarAmigo() {
     // 'nombre' cumple con esta regla: que contenga solo los caracteres permitidos.
     if (!soloTexto.test(nombre)) {
         alert("Por favor, ingrese solo texto");
+        return;
+    }
+    // Validar que el nombre no esté ya en el array (sin distinguir mayúsculas/minúsculas)
+    let nombreMinuscula = nombre.toLowerCase();
+    let existe = amigos.some(amigo => amigo.toLowerCase() === nombreMinuscula);
+    if (existe) {
+        alert("Este amigo ya está en la lista");
         return;
     }
 
