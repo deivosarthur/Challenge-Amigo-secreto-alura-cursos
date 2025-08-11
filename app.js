@@ -68,6 +68,6 @@ function sortearAmigo() {
     let amigoSeleccionado = amigos[indiceAleatorio];
 
     // Mostrar el resultado en el ul con id "resultado"
-    resultado.innerHTML = `<li>${amigoSeleccionado}</li>`;
+    resultado.innerHTML = `<li>El amigo secreto sorteado es: ${amigoSeleccionado}</li>`;
 }
 
