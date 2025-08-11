@@ -61,7 +61,11 @@ function sortearAmigo() {
         resultado.innerHTML = "<li>No hay amigos para sortear</li>";
         return;
     }
-
+    // Validar que haya al menos dos amigos para hacer el sorteo
+    if (amigos.length < 2) {
+        resultado.innerHTML = "<li>Debe ingresar al menos dos amigos para sortear.</li>";
+        return;
+    }
     // Elegir un índice aleatorio del array amigos
     let indiceAleatorio = Math.floor(Math.random() * amigos.length);
 
